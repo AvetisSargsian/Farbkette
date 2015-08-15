@@ -27,14 +27,11 @@ package controllers
 //		================================================
 		public function load():void
 		{
-			
 			so.data.bestScore == undefined ? gameModel.bestScore = 0 : gameModel.bestScore = so.data.bestScore;
-			trace("Load Data", "BestScore = ",gameModel.bestScore);
 		}
 //		================================================		
 		private function save():void
 		{
-			trace("Save Data");
 			so.data.bestScore = gameModel.bestScore; 
 			so.flush(10000);
 		}
